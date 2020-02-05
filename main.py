@@ -12,8 +12,8 @@ STATIONERY_FILE = "stationary.txt"
 
 class HangManBot():
     def __init__(self, *args, **kwargs):
-        my_persistence = PicklePersistence(filename='my_file')
-        updater = Updater('1045683428:AAED1-6AFyjiXAd-sPxhBvCPtZ1Bb2bqW00', persistence=my_persistence, use_context=True)
+        #my_persistence = PicklePersistence(filename='my_file')
+        updater = Updater('1045683428:AAED1-6AFyjiXAd-sPxhBvCPtZ1Bb2bqW00')
         self.choice_flag = 0
         self.started_flag = False
         self.word = ""
