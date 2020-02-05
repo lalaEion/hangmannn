@@ -35,7 +35,7 @@ class HangManBot():
         lines = f.readlines()
         word = random.choice(lines).strip()
         f.close()
-        #print(word)
+        print(word)
         return word
 
     def random_animal(self, filename=ANIMAL_FILE):
@@ -43,7 +43,7 @@ class HangManBot():
         lines = f.readlines()
         word = random.choice(lines).strip()
         f.close()
-        #print(word)
+        print(word)
         return word
 
     def random_stat(self, filename=STATIONERY_FILE):
@@ -51,7 +51,7 @@ class HangManBot():
         lines = f.readlines()
         word = random.choice(lines).strip()
         f.close()
-        #print(word)
+        print(word)
         return word
 
     def start(self, bot, update):  # choose category
