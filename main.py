@@ -78,7 +78,7 @@ class HangManBot():
             self.stat(bot, update)
         else:
             # no game selected
-            #print("No game selected")
+            print("No game selected")
 
     def reset_game(self):
         self.choice_flag = 0
