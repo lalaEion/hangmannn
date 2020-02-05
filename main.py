@@ -34,7 +34,7 @@ class HangManBot():
         lines = f.readlines()
         word = random.choice(lines).strip()
         f.close()
-        print(word)
+        #print(word)
         return word
 
     def random_animal(self, filename=ANIMAL_FILE):
@@ -42,7 +42,7 @@ class HangManBot():
         lines = f.readlines()
         word = random.choice(lines).strip()
         f.close()
-        print(word)
+        #print(word)
         return word
 
     def random_stat(self, filename=STATIONERY_FILE):
@@ -50,7 +50,7 @@ class HangManBot():
         lines = f.readlines()
         word = random.choice(lines).strip()
         f.close()
-        print(word)
+        #print(word)
         return word
 
     def start(self, bot, update):  # choose category
@@ -78,7 +78,7 @@ class HangManBot():
             self.stat(bot, update)
         else:
             # no game selected
-            print("No game selected")
+            #print("No game selected")
 
     def reset_game(self):
         self.choice_flag = 0
@@ -98,7 +98,7 @@ class HangManBot():
                 ''.join([a + ' ' if a in self.found_letters else '_ ' for a in self.word]))
         elif self.started_flag:
             c = update.message.text.upper()
-            print(c)
+            #print(c)
             if len(c) != 1:
                 update.message.reply_text("Enter one letter at a time")
             if c.isalpha():
@@ -122,12 +122,12 @@ class HangManBot():
                 update.message.reply_text(
                     ''.join([a + ' ' if a in self.found_letters else '_ ' for a in self.word]))
             if self.correct_count == len(self.word):  
-                print("Correct")
+                #print("Correct")
                 update.message.reply_text(self.word)
                 update.message.reply_text("Correct.  Well done!")
                 self.reset_game()
             if len(self.incorrect_guesses) >= self.number_of_tries:
-                print("Wrong")
+                #print("Wrong")
                 update.message.reply_text("FKING LOSER!  You failed to guess the word.")
                 update.message.reply_text("The word is " + self.word)
                 self.reset_game()
@@ -141,7 +141,7 @@ class HangManBot():
                 ''.join([a + ' ' if a in self.found_letters else '_ ' for a in self.word]))
         elif self.started_flag:
             c = update.message.text.upper()
-            print(c)
+            #print(c)
             if len(c) != 1:
                 update.message.reply_text("Enter one letter at a time")
             if c.isalpha():
@@ -165,12 +165,12 @@ class HangManBot():
                 update.message.reply_text(
                     ''.join([a + ' ' if a in self.found_letters else '_ ' for a in self.word]))
             if self.correct_count == len(self.word):
-                print("Correct")  
+                #print("Correct")  
                 update.message.reply_text(self.word)
                 update.message.reply_text("Correct.  Well done!")
                 self.reset_game()
             if len(self.incorrect_guesses) >= self.number_of_tries:
-                print("Wrong")
+                #print("Wrong")
                 update.message.reply_text("FKING LOSER!  You failed to guess the word.")
                 update.message.reply_text("The word is " + self.word)
                 self.reset_game()
@@ -184,7 +184,7 @@ class HangManBot():
                 ''.join([a + ' ' if a in self.found_letters else '_ ' for a in self.word]))
         elif self.started_flag:
             c = update.message.text.upper()
-            print(c)
+            #print(c)
             if len(c) != 1:
                 update.message.reply_text("Enter one letter at a time")
             if c.isalpha():
@@ -208,12 +208,12 @@ class HangManBot():
                 update.message.reply_text(
                     ''.join([a + ' ' if a in self.found_letters else '_ ' for a in self.word]))
             if self.correct_count == len(self.word): 
-                print("Correct") 
+                #print("Correct") 
                 update.message.reply_text(self.word)
                 update.message.reply_text("Correct.  Well done!")
                 self.reset_game()
             if len(self.incorrect_guesses) >= self.number_of_tries:
-                print("Wrong")
+                #print("Wrong")
                 update.message.reply_text("FKING LOSER!  You failed to guess the word.")
                 update.message.reply_text("The word is " + self.word)
                 self.reset_game()
